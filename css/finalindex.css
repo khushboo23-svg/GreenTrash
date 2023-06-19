@@ -1,0 +1,249 @@
+@import url('http://fonts.cdnfonts.com/css/florentia');
+body{
+    background-color: rgb(167, 241, 167);
+}
+#header{
+    background-color: rgb(1, 26, 1);
+    color: whitesmoke;
+    font-family: 'Florentia', sans-serif;                                              
+}
+.section h2.section-head:after{
+    background-color: rgb(1, 68, 1);
+    content: "";
+    display: block;
+    width: 200px;
+    height: 3px;
+    margin: 20px auto;
+}
+#menu{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#menu li{
+    display: inline-block;
+}
+#menu li a{
+    color: whitesmoke;
+    padding: 15px 10px;
+    display: block;
+    text-decoration: none;
+}
+#menu li a:hover{
+    background-color: rgb(19, 116, 19);
+    transition: 0.5s;
+}
+.navbar-light .navbar-brand {
+  color: #fff;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+  color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #fff;
+}
+
+.navbar-toggler {
+  background: #fff;
+}
+
+.navbar-nav {
+  text-align: center;
+}
+
+.nav-link {
+  padding: .2rem 1rem;
+}
+
+.nav-link.active,.nav-link:focus{
+  color: #fff;
+}
+
+.navbar-toggler {
+  padding: 1px 5px;
+  font-size: 18px;
+  line-height: 0.3;
+}
+
+.carousel-item img{
+    width: 100%;
+    height: 100vh;
+ }
+ 
+ .carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 27.25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
+ }
+ .carousel-caption {
+    bottom: 200px;
+  }
+  
+  .carousel-caption h5 {
+    /* font-size: 45px; */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    /* margin-top: 25px; */
+  }
+  
+  .carousel-caption p {
+    width: 75%;
+    margin: auto;
+    font-size: 18px;
+    /* line-height: 1.9; */
+  } 
+ .carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 75px;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-right: 15%;
+    margin-bottom: 1rem;
+    margin-left: 15%;
+    list-style: none;
+ }
+
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color: #fff;
+}
+.service-box i{
+    
+    color: rgb(4, 44, 4);
+    font-size: 70px;
+    margin-bottom: 15px;
+}
+.service-box i:hover{
+    color: green;
+}
+#testimonials{
+    background: url('../images/test.jpg') no-repeat 0 0;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 8px 0;
+    position: relative;
+    color: rgb(4, 44, 4);
+    z-index: 1;
+}
+.reviews{
+    background: rgba(42, 143, 16, 0.685);
+    color: white;
+    border-bottom: 2px solid rgb(28, 161, 28);
+}
+.reviews:hover{
+    background: rgba(62, 196, 28, 0.685);
+    transform: scale(1.05); 
+    transition: 0.5s;
+    color: rgb(6, 20, 6);
+}
+.colors{
+    color: green;
+    font-weight: bold;
+}
+.images{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+.news-post img{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.news-post h3{
+    font-size: 1.35rem;
+    text-decoration: none;
+}
+.post-date{
+    font-size: 13px;
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+.news-post h3 a{
+    text-decoration: none;
+   
+}
+.readmore{
+    text-decoration: none;
+}
+#footer-sidebar{
+    color: white;
+    background-color: rgb(1, 36, 1);
+    padding: 80px;
+
+}
+.footer-widget a{
+    
+    color: white;
+}
+.latest-news{
+    list-style: none;
+    text-decoration: none;
+}
+.latest-news li{
+    margin-bottom: 3px;
+}
+#footer{
+    background-color: rgb(22, 139, 22);
+    color: white;
+    padding: 10px 0;
+}
+
+#icons{
+    color: white;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#icons li{
+    display: inline-block;
+    padding-left: 5px;
+}
+#icons li a{
+    color: white;
+    font-size: 30px;
+}
+@media (max-width:768px){
+    .testimonial{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .service-box{
+        margin-bottom: 30px;
+    }
+    .footer-widget{
+        margin-bottom: 20px;
+    }
+    #footer{
+        text-align: center;
+    }
+    #icons{
+        margin-top: 10px;
+    }
+    #logo{
+        text-align: center;
+        margin: 10px 0;
+    }
+    .news-post{
+        margin-bottom: 30px;
+    }
+    #menu{
+        text-align: center;
+    }
+}
