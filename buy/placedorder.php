@@ -1,4 +1,5 @@
 <?php
+session_start();
     include('connection.php');
 ?>
 <!DOCTYPE html>
@@ -22,6 +23,25 @@
     margin-bottom:30px;
     margin-top:30px;
     }
+    #button{
+    background-color: rgb(46,139,87);
+    margin-bottom:10px;
+    margin-left:50px;
+    width:260px;
+    
+    
+}
+#button:hover{
+    color:black;
+}
+#link{
+    text-decoration:none;
+    color:white;
+}
+#link:hover{
+    color:black;
+    cursor:hand;
+}
 </style>
 </head>
 <body>
@@ -49,4 +69,26 @@
                 Green Trash Team will contact you soon.
             </center>
         </p>
+        <p>
+            <center>
+            <button type="button" class="btn bg-cart" id="button" ><a href="n.php" id="link">Continue Shopping</a></button>
+            </center>
+        </p>
+
+        
+            <!--$order_id=$_SESSION["order_id"];
+            $query="UPDATE sell SET quantity=(quantity-1) WHERE `id` = '$order_id'";
+            $result = mysqli_query($con,$query);
+            if  ($result){
+                echo ("<script LANGUAGE='JavaScript'>
+                        window.alert('Message sent to green trash ✔!');
+                        window.location.href='n.php';
+                        </script>");
+                }else{
+                echo "<script>alert('Message not sent try again!');</script>";
+                }
+        ?>-->
+
     </div>
+</body>
+</html>

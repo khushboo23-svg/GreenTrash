@@ -50,7 +50,7 @@
                               Login/SignUp
                             </button>
                             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-                              <li><a class="dropdown-item" href="login.php">User Login</a></li>
+                              <li><a class="dropdown-item" href="loginRegister/register.php">User Login</a></li>
                               <li><a class="dropdown-item" href="Admin/login.php">Admin Login</a></li>
                             </ul>
                           </div>
@@ -176,6 +176,7 @@
             </div>
         </div>
     </div>
+    
     <!-- News section -->
     <div id="news" class="container section mb-4">
         <div class="row" style="text-align: center;">
@@ -185,7 +186,7 @@
             <div class="row justify-content-evenly">
                 <div class="col-md-4 col-lg-3">
                     <div class="news-post">
-                        <img src="images/waste1.jpg" alt="">
+                        <img src="images/electronic.jpg" alt="">
                         <h3>Electronic Waste</h3>
                         <p>When electronics are mishandled during disposal, these chemicals end up in our soil, water,
                             and air.</p>
@@ -194,7 +195,7 @@
 
                 <div class="col-md-4 col-lg-3">
                     <div class="news-post">
-                        <img src="images/waste2.jpg" alt="">
+                        <img src="images/plastic.jpg" alt="">
                         <h3>Plastic Waste</h3>
                         <p>The most visible and disturbing impacts of marine plastics are the ingestion, suffocation and
                             entanglement of hundreds of marine species.</p>
@@ -202,16 +203,16 @@
                 </div>
                 <div class="col-md-4 col-lg-3">
                     <div class="news-post">
-                        <img src="images/waste3.jpg" alt="">
+                        <img src="images/paper.jpg" alt="">
                         <h3>Paper Waste</h3>
                         <p> When paper rots, it emits methane gas which is 25 times more toxic than CO2.</p>
                     </div>
                 </div>
                 <div class="col-md-4 col-lg-3">
                     <div class="news-post">
-                        <img src="images/foodwaste.jpeg" alt="">
+                        <img src="images/food.jpeg" alt="">
                         <h3>Food Waste</h3>
-                        <p>throwing away one burger wastes the same amount of water as a 90 minute shower. Food waste
+                        <p>Throwing away one burger wastes the same amount of water as a 90 minute shower. Food waste
                             produces eight per cent of global greenhouse gas emissions.</p>
                     </div>
                 </div>

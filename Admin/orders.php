@@ -90,7 +90,7 @@ include('connection.php');
           </a>    
           <a href="display.php" class="list-group-item list-group-item-action py-2 ripple">
             <span>Admin</span></a>
-          <a href="user-table.php" class="list-group-item list-group-item-action py-2 ripple">
+          <a href="users.php" class="list-group-item list-group-item-action py-2 ripple">
             <span>Users</span></a>  
           <a href="orders.php" class="list-group-item list-group-item-action py-2 ripple" >
             <span>Orders</span></a>

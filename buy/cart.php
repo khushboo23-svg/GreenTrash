@@ -31,6 +31,8 @@ switch($_GET["action"]) {
 			}
 		}
 	}
+	
+
 	break;
 
 	// code for removing product from cart
@@ -43,18 +45,25 @@ switch($_GET["action"]) {
 						unset($_SESSION["cart_item"]);
 			}
 		}
+		
 	break;
 	// code for if cart is empty
 	case "empty":
 		unset($_SESSION["cart_item"]);
+		
 	break;	
 }
 }
+
 ?>
+
 <HTML>
 <HEAD>
 <TITLE>Simple PHP Shopping Cart</TITLE>
 <link href="css/servicestyle.css" type="text/css" rel="stylesheet" />
+<link href="css/buystyle.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <title>Cart</title>
 <link rel="icon" href="images/icon.png" type="image/icon type">
 </HEAD>
@@ -101,6 +110,19 @@ switch($_GET["action"]) {
 #shopping-cart table td {
 	background-color: #FFFFFF;
 }
+.forms {
+     color: white;
+    box-shadow: inset 2000px 0 0 0  rgba(211, 204, 204, 0.158);
+    margin-bottom:30px;
+   
+    margin-left:50px;
+    margin-right:50px;
+}
+.btn{
+	background-color: rgb(46,139,87);
+    margin-bottom:15px;
+	color:black;
+}
 
 </style>
 <BODY>
@@ -120,6 +142,7 @@ if(isset($_SESSION["cart_item"])){
 <table class="tbl-cart" cellpadding="10" cellspacing="1">
 <tbody>
 <thead>
+	
 <th style="text-align:left;">Product</th>
 <th style="text-align:left;">Name</th>
 <th style="text-align:left;">Code</th>
@@ -142,24 +165,23 @@ if(isset($_SESSION["cart_item"])){
 				<?php
 				$total_quantity += $item["quantity"];
 				//$total_price += ($item["price"]*$item["quantity"]);
+				$_SESSION["order_id"]=$item["id"];
 		}
 		?>
 
 <tr>
 <td colspan="2" align="right">Total:</td>
-<td align="right"><?php echo $total_quantity; ?></td>
+<td align="right" colspan="2"><?php echo $total_quantity; ?></td>
 <!--<td align="right" colspan="2"><strong>
 	<!-<?php echo "$ ".number_format($total_price, 2); ?></strong></td>-->
 <td></td>
 </tr>
 <tr>
-<a id="btnShop" href="n.php">Continue Shopping</a>
-</tr>
-<tr>
-	<td>
+	<td colspan="5">
 	<a id="btnOrder" href="buy.php">Place Order</a>
 	</td>
 </tr>
+
 </tbody>
 </table>	
 
@@ -171,11 +193,11 @@ if(isset($_SESSION["cart_item"])){
 <?php 
 }
 ?>
-</div>
-
-
 
 </div>
+</div>
+
+  
 </div>
 
 

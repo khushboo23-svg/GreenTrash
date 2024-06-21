@@ -89,7 +89,7 @@ include('connection.php');
           </a>    
           <a href="display.php" class="list-group-item list-group-item-action py-2 ripple">
             <span>Admin</span></a>
-          <a href="user-table.php" class="list-group-item list-group-item-action py-2 ripple">
+          <a href="users.php" class="list-group-item list-group-item-action py-2 ripple">
             <span>Users</span></a>
           <a href="orders.php" class="list-group-item list-group-item-action py-2 ripple">
             <span>Orders</span></a>
@@ -131,6 +131,7 @@ include('connection.php');
                     <th scope="col">Type</th>
                     <th scope="col">Image</th>
                     <th scope="col">Quantity</th>
+                    <th scope="col">Seller Name</th>
                     <th scope="col">Address</th>
                     <th scope="col">Pincode</th>
 
@@ -154,10 +155,13 @@ include('connection.php');
                               <p><?php echo $row['type']; ?></p>
                           </td>
                           <td>
-                              <img width="auto" src="../sell/upload/<?php echo $row['image']?>" width="100" height="100" /> 
+                              <img  src="../sell/upload/<?php echo $row['image']?>" width="100" height="100" /> 
                           </td>
                           <td>
                               <?php echo $row['quantity']; ?>
+                          </td>
+                          <td>
+                            <p><?php echo $row['username'];?></p>
                           </td>
                           <td>
                                  <p><?php echo $row['area']; ?><?php echo $row['city'];?></p>

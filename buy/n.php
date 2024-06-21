@@ -1,5 +1,6 @@
 <?php
     include('connection.php');
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -81,10 +82,7 @@
                 </div>
                 <div class="col-md-8 my-2">
                     <ul id="menu" class="float-md-end">
-                        <li><a href="index-final.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="login.html">Login/Signup</a></li>
+                        <li><a href="logout.php">Logout</a></li>
                     </ul>
                 </div>
             </div>
@@ -100,7 +98,7 @@
             </div>
             <div class="row">
             <?php
-                $sql = "Select * from `sell`";
+                $sql = "Select * from `sell` ";
                 $result = mysqli_query($con,$sql);
                 while($row=mysqli_fetch_array($result))
                 {

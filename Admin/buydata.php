@@ -1,5 +1,7 @@
 <?php
+ session_start();
 include('connection.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -89,7 +91,7 @@ include('connection.php');
           </a>    
           <a href="display.php" class="list-group-item list-group-item-action py-2 ripple">
             <span>Admin</span></a>
-          <a href="user-table.php" class="list-group-item list-group-item-action py-2 ripple">
+          <a href="users.php" class="list-group-item list-group-item-action py-2 ripple">
             <span>Users</span></a>
           <a href="orders.php" class="list-group-item list-group-item-action py-2 ripple">
             <span>Orders</span></a>
@@ -126,26 +128,47 @@ include('connection.php');
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">Sl Number</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Adress </th>
-                    <th scope="col">City</th>
-                    <th scope="col">Mobile</th>
-
+                    <th scope="col">Product</th>
+                    <th scope="col">Product Id</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Buyer UserId</th>
+                    <th scope="col">Buyer Name</th>
+                    <th scope="col">Buyer Email </th>
+                    <th scope="col">Shipping Address</th>
+                    <th scope="col">Buyer Contact</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
-                $sql = "Select * from `buy`";
+                $sql = "Select * from `orderdetails` order by id desc";
                 $result = mysqli_query($con,$sql);
                 if($result){
                     while($row=mysqli_fetch_array($result)){
                       ?>
                       <tr>
-                          <td>
-                              <p><?php echo $row['id']; ?></p>
+                         <td>
+                         <?php
+                                $query="select * from sell where id='$row[prod_id]'";
+                                $res=mysqli_query($con,$query);
+                                $img=mysqli_fetch_array($res);
+                              ?>
+                              <img  src="../sell/upload/<?php echo $img['image']?>" width="100" height="100" alt="loading image..." /> 
+                              
                           </td>
+                          <td>
+                            <p><?php echo $row['prod_id'];?></p>
+                          </td>
+                          <td>
+                          <?php
+                                $query="select * from sell where id='$row[prod_id]'";
+                                $res=mysqli_query($con,$query);
+                                $name=mysqli_fetch_array($res);
+                              ?>
+                            <p><?php echo $name['product_name'];?></p>
+                          </td>
+                          <td>
+                            <p><?php echo $row['user_id'] ;?></p> 
+                          </td> 
                           <td>
                               <p><?php echo $row['first']; ?><?php echo $row['last']; ?></p>
                           </td>
@@ -153,24 +176,21 @@ include('connection.php');
                               <p><?php echo $row['email']; ?></p>
                           </td>
                           <td>
-                              <?php echo $row['town']; ?>
+                              <?php echo $row['address']; ?>
                           </td>
                           <td>
-                                 <p><?php echo $row['area']; ?>
-                            </td>
-                            <td>
-                                <p><?php echo $row['phone']; ?></p>
-                            </td>
-                      </tr>  
-                      <?php
-                       
-                       
-
-                    
+                              <p><?php echo $row['phone']; ?></p>
+                          </td>
+                         
+                          
+                    <?php        
                     }
                 }
-
-                ?>
+                
+             ?> 
+              
+                      
+                      
           
                 
             </tbody>

@@ -1,3 +1,11 @@
+<?php
+    session_start();
+  include('connection.php');
+ 
+  
+  
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,11 +58,11 @@ body{
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8">
-                    <form action="insert.php" method="post" enctype="multipart/form-data">
+                    <form action="in.php" method="post" enctype="multipart/form-data">
                         <div class="row justify-content-start mb-3">
                             <div class="col-md-4 mt-2">
                                 <label for="exampleInputEmail1" class="form-label text-capitalize">first name</label>
-                                <input type="text" aria-label="First name" name="first" class="form-control" placeholder="Enter your first name">
+                                <input type="text" aria-label="First name" name="first" class="form-control" placeholder="Enter your first name" >
                             </div>
                             <div class="col-md-4 mt-2">
                                 <label for="exampleInputEmail1" class="form-label text-capitalize">last name</label>
@@ -62,19 +70,31 @@ body{
                             </div>
                         </div>
                         <div class="mb-3">
+                        <?php
+                $order_id=$_SESSION["order_id"];
+              ?>
+                          <label for="address" class="form-label">Product_Id</label>
+                          <input type="text" class="form-control" id="exampleInputPassword1" name="productid" value="<?php echo $order_id ;?>" readonly >
+                        </div>
+                        <div class="">
+                        <?php
+                $user_id=$_SESSION['username'];
+              ?>
+                          <label for="address" class="form-label"></label>
+                          <input type="hidden" class="form-control" id="exampleInputPassword1" name="userid" value="<?php echo $user_id ;?>" readonly >
+                        </div>
+
+                        <div class="mb-3">
+                          <label for="address" class="form-label">Address</label>
+                          <input type="text" class="form-control" id="exampleInputPassword1" name="address" placeholder="Enter your yown/city">
+                        </div>
+                        <div class="mb-3">
                           <label for="exampleInputEmail1" class="form-label">Email address</label>
                           <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your email address">
                         </div>
+                       
                         <div class="mb-3">
-                          <label for="exampleInputEmail1" class="form-label">Town/City</label>
-                          <input type="password" class="form-control" id="exampleInputPassword1" name="town" placeholder="Enter your yown/city">
-                        </div>
-                        <div class="mb-3">
-                          <label for="exampleInputEmail1" class="form-label">Area, HouseNo.</label>
-                          <input type="password" class="form-control" id="exampleInputPassword1" name="area" placeholder="Enter your area, house number">
-                        </div>
-                        <div class="mb-3">
-                          <label for="exampleInputEmail1" class="form-label">Phone Number</label>
+                          <label for="phone" class="form-label">Phone Number</label>
                           <input type="number" class="form-control" id="exampleInputPassword1" name="phone" placeholder="Enter your phone number">
                         </div>
                         <button type="submit" name="submit" id="submit" class="btn btn-outline-success">Submit</button>
@@ -83,7 +103,46 @@ body{
             </div>
         </div>
     </div>
-  
+    <?php
+    if(isset ($_POST['submit'])){
+
+    
+$first = $_POST['first'];
+$last = $_POST['last'];
+$prod_id=$_POST['prod_id'];
+$email = $_POST['email'];
+$address =$_POST['address'];
+$phone =  $_POST['phone'];
+
+
+$insertquery = "insert into order_detail(first, last, prod_id, email, address,phone) values('$first', '$last','$prod_id',$email', '$address','$phone')";
+
+$res = mysqli_query($con,$insertquery);
+
+if  ($res){
+echo ("<script LANGUAGE='JavaScript'>
+        window.alert('Message sent to green trash ✔!');
+        window.location.href='placedorder.php';
+        </script>");
+}else{
+echo "<script>alert('Message not sent try again!');</script>";
+}
+
+}
+/*$res=mysqli_query($con,"select * from product order by id desc limit 1");
+				while($row=mysqli_fetch_array($res))
+				{
+                    $q=mysqli_query($q,"select * from buy order by id desc limit 1");
+                    while($row1=mysqli_fetch_array($q)){
+                        if($row1["id"]==$row["id"]){
+                            $_SESSION["order_id"]=$row["prod_id"];
+                        }
+                    }
+					$_SESSION["order_id"]=$row["prod_id"];
+                   
+				}*/
+
+?>
 
 
     <!-- Footer -->

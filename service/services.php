@@ -59,7 +59,7 @@
                               Login/SignUp
                             </button>
                             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-                              <li><a class="dropdown-item" href="../login.php">User Login</a></li>
+                              <li><a class="dropdown-item" href="../loginRegister/register.php">User Login</a></li>
                               <li><a class="dropdown-item" href="../Admin/login.php">Admin Login</a></li>
                             </ul>
                           </div>
@@ -96,7 +96,7 @@
               Reduce the amount of waste sent to landfills and incinerators by selling recyclable materials.
               </p>
               
-              <button class="btn btn-success w-75"><a href="../login.php" class="btns">Login to know more</a></button>            
+              <button class="btn btn-success w-75"><a href="../loginRegister/register.php" class="btns">Login to know more</a></button>            
           </div>
       </div>
   </div>
@@ -112,7 +112,7 @@
               By purchasing recycled products, you encourage manufacturing methods that limit resource use, and energy waste, by producing items from a reusable material. 
               </p>
               
-              <button class="btn btn-success w-75"><a href="../login.php" class="btns">Login to know more</a></button>            
+              <button class="btn btn-success w-75"><a href="../loginRegister/register.php" class="btns">Login to know more</a></button>            
           </div>
       </div>
   </div>
@@ -128,7 +128,7 @@
               Recycling reduces the need for extracting, refining and processing raw materials all of which create air and water pollution. As recycling saves energy it also reduces greenhouse gas emissions, which helps to tackle climate change.
               </p>
               
-              <button class="btn btn-success w-75"><a href="../login.php" class="btns">Login to know more</a></button>            
+              <button class="btn btn-success w-75"><a href="../loginRegister/register.php" class="btns">Login to know more</a></button>            
           </div>
       </div>
   </div>

@@ -40,7 +40,7 @@
                               Login/SignUp
                             </button>
                             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-                              <li><a class="dropdown-item" href="../login.php">User Login</a></li>
+                              <li><a class="dropdown-item" href="../loginRegister/register.php">User Login</a></li>
                               <li><a class="dropdown-item" href="../Admin/login.php">Admin Login</a></li>
                             </ul>
                           </div>

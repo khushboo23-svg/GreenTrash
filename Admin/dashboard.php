@@ -89,7 +89,7 @@ include('connection.php');
           </a>    
           <a href="display.php" class="list-group-item list-group-item-action py-2 ripple">
             <span>Admin</span></a>
-          <a href="user-table.php" class="list-group-item list-group-item-action py-2 ripple">
+          <a href="users.php" class="list-group-item list-group-item-action py-2 ripple">
             <span>Users</span></a>  
           <a href="orders.php" class="list-group-item list-group-item-action py-2 ripple" >
             <span>Orders</span></a>
@@ -147,11 +147,17 @@ include('connection.php');
             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total Registered User</div>
             <div class="h5 mb-0 font-weight-bold text-gray-800">
             <?php
-                $sql = "Select * from `usertable`";
+                $sql = "Select * from `sellertable`";
                 $result = mysqli_query($con,$sql);
                 if($result){
-                    $rowcount=mysqli_num_rows($result);
+                    $seller=mysqli_num_rows($result);
                 }
+                $sql1="select * from `buyertable`";
+                $res=mysqli_query($con,$sql1);
+                if($res){
+                  $buyer=mysqli_num_rows($res);
+                }
+                $rowcount=$seller+$buyer;
               echo "<h4>Total User: $rowcount</h4>"
              ?>
             </div>

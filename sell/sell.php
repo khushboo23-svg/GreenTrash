@@ -1,3 +1,4 @@
+<?php  session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,8 +55,8 @@
                 </div>
                 <div class="col-md-8 my-2">
                     <ul id="menu" class="float-md-end">
-                        <li><a href="../logout.php">Logout</a></li>
-                        
+                    <li><a href="../loginRegister/seller/seller_logout.php">Logout</a></li>
+
                     </ul>
                 </div>
             </div>
@@ -93,7 +94,13 @@
                          </select>        
                                          
                     </div>
-                    
+                    <div class="col-md-10 m-2">
+                    <?php
+                $username=$_SESSION["username"];
+              ?>
+                        <!--<label for="text"> User Name</label>-->
+                        <input type="hidden" class="inp w-100 p-3" placeholder="User Name" name="user_name" id="text" value="<?php echo $username;?>"required>
+                      </div>
                       <div class="col-md-10 m-2">
                         <label for="text">Name of Product</label>
                         <input type="text" class="inp w-100 p-3" placeholder="Name of Production" name="product_name" id="text" required>
