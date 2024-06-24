@@ -18,6 +18,12 @@ GreenTrash is a versatile web application that allows users to register as both 
 - **Backend**: PHP
 - **Server**: XAMPP
 
+### 4. Getting Started
+
+### Prerequisites
+- XAMPP Server
+- Web Browser
+
 ## Screenshots
 
 ### Front Page
@@ -48,10 +54,6 @@ GreenTrash is a versatile web application that allows users to register as both 
 
 ![Responsive View](https://github.com/khushboo23-svg/GreenTrash/assets/81730811/75c4aee6-c8b5-4eba-8e2c-e3fb0b2f55aa)
 
-## Getting Started
 
-### Prerequisites
-- XAMPP Server
-- Web Browser
 
 
